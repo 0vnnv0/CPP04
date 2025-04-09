@@ -6,7 +6,7 @@
 /*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 16:31:10 by anschmit          #+#    #+#             */
-/*   Updated: 2025/04/07 16:47:46 by anschmit         ###   ########.fr       */
+/*   Updated: 2025/04/08 14:42:31 by anschmit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ class Dog : public Animal
 		Dog(const Dog &other);
 		Dog &operator=(const Dog &other);
 		~Dog();
+		virtual void makeSound() const;
 };
 
 #endif

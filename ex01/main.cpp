@@ -6,7 +6,7 @@
 /*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 16:28:40 by anschmit          #+#    #+#             */
-/*   Updated: 2025/04/08 16:42:58 by anschmit         ###   ########.fr       */
+/*   Updated: 2025/04/09 15:11:55 by anschmit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,25 +16,32 @@
 
 int main()
 {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
-	std::cout << meta->getType() << " " << std::endl;
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound(); //will output the cat sound!
-	j->makeSound();
-	meta->makeSound();
-	delete meta;
-	delete j;
-	delete i;
+	// const Animal* j = new Dog();
+	// const Animal* i = new Cat();
 
-	const WrongAnimal* wm = new WrongAnimal();
-	const WrongAnimal* wc = new WrongCat();
-	std::cout << wc->getType() << " " << std::endl;
-	wc->makeSound();
-	wm->makeSound();
-	delete wm;
-	delete wc;
-	return 0;
+	// std::cout << j->getType() << " " << std::endl;
+	// std::cout << i->getType() << " " << std::endl;
+
+	// Cat a;
+	// Cat b;
+
+	// a = b;
+
+	// std::cout << "a's brain: " << a.getBrain() << std::endl;
+	// std::cout << "b's brain: " << b.getBrain() << std::endl;
+	
+	Animal *animals[10];
+	for (int k = 0; k < 10; k++)
+	{
+		if (k % 2 == 0)
+			animals[k] = new Dog();
+		else
+			animals[k] = new Cat();
+	}
+
+	for (int l = 0; l < 10; l++)
+	{
+		delete animals[l];
+	}
+	return (0);
 }

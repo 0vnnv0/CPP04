@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/07 16:29:12 by anschmit          #+#    #+#             */
-/*   Updated: 2025/04/08 16:43:17 by anschmit         ###   ########.fr       */
+/*   Created: 2025/04/09 16:40:37 by anschmit          #+#    #+#             */
+/*   Updated: 2025/04/09 17:01:57 by anschmit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#include "Cure.hpp"
 
-#include <iostream>
-
-class Animal
+Cure::Cure()
 {
-	protected:
-		std::string _type;
-	public:
-		Animal();
-		Animal(std::string type);
-		Animal(const Animal &other);
-		Animal &operator=(const Animal &other);
-		virtual ~Animal();
-		std::string getType() const;
-		virtual void  makeSound() const;
-};
+	_type = "Cure";
+}
 
-
-#endif
+void Cure::use(ICharacter& target)
+{
+	std::cout << "* heals " << &target << "`s wounds *" << std::endl;
+}
+AMateria* Cure::clone() const
+{
+	return (new Cure());
+}
