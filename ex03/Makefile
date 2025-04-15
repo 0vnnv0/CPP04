@@ -6,13 +6,13 @@
 #    By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/04/09 15:17:21 by anschmit          #+#    #+#              #
-#    Updated: 2025/04/09 15:17:35 by anschmit         ###   ########.fr        #
+#    Updated: 2025/04/15 14:38:13 by anschmit         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = AMateria
 
-SRC = main.cpp
+SRC = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp MateriaSource.cpp
 CXX = c++
 
 OBJS = $(SRC:.cpp=.o)

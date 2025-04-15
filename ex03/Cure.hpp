@@ -6,7 +6,7 @@
 /*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 16:04:44 by anschmit          #+#    #+#             */
-/*   Updated: 2025/04/09 16:58:55 by anschmit         ###   ########.fr       */
+/*   Updated: 2025/04/15 15:42:35 by anschmit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ class Cure : public AMateria
 {
 	public:
 		Cure();
-		~Cure() {}
+		Cure(const Cure &other);
+		Cure &operator=(const Cure &other);
+		~Cure();
 		void use(ICharacter& target);
 		AMateria* clone() const;
 

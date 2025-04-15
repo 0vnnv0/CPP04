@@ -6,13 +6,17 @@
 /*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 15:52:43 by anschmit          #+#    #+#             */
-/*   Updated: 2025/04/09 16:58:09 by anschmit         ###   ########.fr       */
+/*   Updated: 2025/04/15 12:59:49 by anschmit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "IMateriaSource.hpp"
 #include "Ice.hpp"
 #include "Cure.hpp"
+#include "Character.hpp"
+#include "ICharacter.hpp"
+#include "MateriaSource.hpp"
+#include "AMateria.hpp"
 
 int main()
 {
