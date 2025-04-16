@@ -3,16 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   IMateriaSource.hpp                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anna <anna@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/09 16:02:10 by anschmit          #+#    #+#             */
-/*   Updated: 2025/04/09 16:30:23 by anschmit         ###   ########.fr       */
+/*   Updated: 2025/04/16 16:35:11 by anna             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef IMATERIASOURCE_HPP
 #define IMATERIASOURCE_HPP
-#include "AMateria.hpp"
+
+#include <string>
+
+class AMateria;
 
 class IMateriaSource
 {

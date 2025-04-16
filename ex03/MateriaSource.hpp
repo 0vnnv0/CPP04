@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   MateriaSource.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anschmit <anschmit@student.42.fr>          +#+  +:+       +#+        */
+/*   By: anna <anna@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/15 12:56:26 by anschmit          #+#    #+#             */
-/*   Updated: 2025/04/15 13:54:55 by anschmit         ###   ########.fr       */
+/*   Updated: 2025/04/16 16:51:29 by anna             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,11 +18,16 @@
 
 class MateriaSource : public IMateriaSource
 {
+	private:
+		AMateria* _templates[4];
+		
 	public:
 		MateriaSource();
 		MateriaSource(const MateriaSource &other);
 		MateriaSource &operator=(const MateriaSource &other);
-		virtual void learnMateria(AMateria*);
+		virtual ~MateriaSource();
+		
+		virtual void learnMateria(AMateria* m);
 		virtual AMateria* createMateria(std::string const & type);
 };
 
